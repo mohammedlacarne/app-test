@@ -1,11 +1,14 @@
-const http = require('http')
-const express = require("express")
-const router = express()
-const dotenv = require('dotenv')
-dotenv.config()
+// Get dependencies
+const express = require('express');
+require('dotenv').config();
+const http = require('http');
+// Include the cluster module
+const cluster = require('cluster');
+// Include configuration files
 
 
 
+const router = express();
 router.get('/', async(req, res, next) =>{
   res.send('hello')
 })
@@ -22,4 +25,4 @@ server.listen(port, function(error) {
       console.log("listenig on port ", port)
     });
 
-    
+
