@@ -1,0 +1,5 @@
+# [START runtime]
+service: test
+runtime: nodejs10
+env: standard
+# [END runtime]
