@@ -1,5 +1,5 @@
 # [START runtime]
-service: test
+service: edtest
 runtime: nodejs10
 env: standard
 # [END runtime]
