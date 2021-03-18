@@ -9,7 +9,7 @@ const router = express()
 router.get('/', async(req, res, next) =>{
   res.send('hello')
 })
-const port = process.env.SERVER_PORT || '4000';
+//const port = process.env.SERVER_PORT || '4000';
 router.set('port', "3000");
 const server = http.createServer(router);
 /**
