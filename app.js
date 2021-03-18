@@ -1,15 +1,21 @@
 const http = require('http')
 const express = require("express")
 const router = express()
-const dotenv = require('dotenv')
-dotenv.config()
+dotenv = require('dotenv')
+const result = dotenv.config()
+
+if (result.error) {
+  throw result.error
+}
+
+console.log(result.parsed)
 
 
 
 router.get('/', async(req, res, next) =>{
   res.send('hello')
 })
-const port = process.env.SERVER_PORT || '4000';
+const port = process.env.PORT || '4000';
 router.set('port', port);
 const server = http.createServer(router);
 /**
