@@ -17,6 +17,7 @@ const server = http.createServer(router);
 */
 server.listen(port, function(error) {
     if (error) {
-      console.error("Unable to listen on port", port, error);
+      console.log("Unable to listen on port", port, error);
       return;}
+      console.log("listenig on port ", port)
     });
